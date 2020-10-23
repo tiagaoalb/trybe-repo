@@ -1,4 +1,4 @@
-var a = 4;
-var b = 3;
+const a = 4;
+const b = 3;
 
 console.log(a % b);
