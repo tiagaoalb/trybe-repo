@@ -1,5 +1,5 @@
-var x = 10;
-var y = 5;
+const x = 10;
+const y = 5;
 
 if (x > y) {
   console.log(x);
