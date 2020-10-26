@@ -1,12 +1,7 @@
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-let indexOfSmallest = 0;
-let smallestNumber = numbers[0];
+let array25 = [];
 
-for (let i = 0; i < numbers.length; i++) {
-  if (numbers[i] < smallestNumber) {
-    smallestNumber = numbers[i];
-    indexOfSmallest = i;
-  }
+for (let i = 1; i < 26; i++) {
+  array25.push(i);
 }
 
-console.log(`O menor número encontrado foi ${smallestNumber}.`);
+console.log(array25);
