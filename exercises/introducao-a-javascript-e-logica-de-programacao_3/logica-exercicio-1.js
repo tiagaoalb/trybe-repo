@@ -1,5 +1,10 @@
-let number = 4;
+let numberOfAsterisks = 5;
+let squareArray = "";
 
-for (altura = 1; altura <= number; altura += 1) {
-  
+for (let i = 1; i <= numberOfAsterisks; i += 1) {
+  squareArray += "*";
+}
+
+for (let j = 1; j <= numberOfAsterisks; j += 1) {
+  console.log(squareArray);
 }
