@@ -10,4 +10,4 @@ function longestName() {
   return longestString;
 }
 
-console.log(`O índide que contém o maior valor é o ${longestName()}.`);
+console.log(`O nome que contém o maior número de caracteres é ${longestName()}.`);

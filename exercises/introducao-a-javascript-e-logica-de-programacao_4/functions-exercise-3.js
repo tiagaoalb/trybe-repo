@@ -10,4 +10,4 @@ function lowestIndex() {
   return lowestValue;
 }
 
-console.log(`O índide que contém o maior valor é o ${lowestIndex()}.`);
+console.log(`O índide que contém o menor valor é o ${lowestIndex()}.`);
