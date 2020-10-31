@@ -41,30 +41,44 @@
     </div>
     <script>
       function changeText(text) {
-        document.getElementsByTagName("p")[0].innerHTML = text;  
+        document.getElementsByTagName("p")[0].innerHTML = text;
       }
       changeText("Me vejo maravilhoso!");
 
       function changeYellowToGreen(color) {
-        document.getElementsByClassName("main-content")[0].style.backgroundColor = color;
+        document.getElementsByClassName(
+          "main-content"
+        )[0].style.backgroundColor = color;
       }
       changeYellowToGreen("rgb(76,164,109)");
 
       function changeRedToWhite(color) {
-        document.getElementsByClassName("center-content")[0].style.backgroundColor = color;
+        document.getElementsByClassName(
+          "center-content"
+        )[0].style.backgroundColor = color;
       }
       changeRedToWhite("white");
 
-      function fixTagH1 (text) {
+      function fixTagH1(text) {
         document.getElementsByTagName("h1")[0].innerHTML = text;
       }
       fixTagH1("Exercício 5.1 - Javascript");
 
-      function changeToUpperCase () {
-        document.getElementsByClassName("p")[0].style.textTransform = "uppercase";
+      function changeToUpperCase() {
+        let text = document.getElementsByTagName("p");
+        for (let i = 0; i < text.length; i++) {
+          text[i].style.textTransform = "uppercase";
+        }
       }
       changeToUpperCase();
-      
+
+      function showOnConsole() {
+        let text = document.getElementsByTagName("p");
+        for (let i = 0; i < text.length; i++) {
+          console.log(text[i].innerHTML);
+        }
+      }
+      showOnConsole();
     </script>
   </body>
 </html>
