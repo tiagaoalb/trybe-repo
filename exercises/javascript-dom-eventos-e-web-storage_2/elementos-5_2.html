@@ -119,7 +119,19 @@
         let insertH3 = document.createElement("h3");
         divMain.appendChild(insertH3);
       }
+
+      // Exercício 10
+      let h1Class = document.querySelector("h1");      
+      h1Class.className = "title";
       
+      // Exercício 11
+      let h3Class = document.getElementsByTagName("h3");
+      let h3Length = h3Class.length;
+      for (i = 0; i < h3Length; i += 1) {
+        h3Class[i].className = h3Class[i].className + "description";
+      }
+      
+
     </script>
   </body>
 </html>
