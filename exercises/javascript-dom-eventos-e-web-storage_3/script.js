@@ -67,7 +67,7 @@ let monthDays = () => {
     listOfDays.innerHTML = day;
     daysOfTheMonth.appendChild(listOfDays);
 
-    if (day === 24 || day === 25 || day === 31) {
+    if (day == 24 || day == 25 || day == 31) {
       listOfDays.classList.add('holiday');
     }
 
@@ -79,6 +79,32 @@ let monthDays = () => {
 monthDays();
 
 // Exercício 2
+const buttonContainer = document.querySelector('.buttons-container');
+
 let holidayButton = (string) => {
-  
-}
+  let btnHoliday = document.createElement('button');
+  btnHoliday.id = 'btn-holiday';
+  btnHoliday.innerText = string;
+  buttonContainer.appendChild(btnHoliday);
+};
+holidayButton('Feriados');
+
+// Exercício 3
+let holidayClick = () => {
+  const holidayBtn = document.querySelector('#btn-holiday');
+  const holidayLi = document.querySelectorAll('.holiday');
+
+  for (let li of holidayLi) {
+    holidayBtn.addEventListener('click', () => {
+      if (li.style.backgroundColor != 'white') {
+        li.style.backgroundColor = 'white';
+      } else {
+        li.style.backgroundColor = 'rgb(238, 238, 238)';
+      }
+    });
+  }
+};
+holidayClick();
+
+// Exercício 4
+
