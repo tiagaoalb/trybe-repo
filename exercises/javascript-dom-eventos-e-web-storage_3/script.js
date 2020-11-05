@@ -157,3 +157,28 @@ let zoomOutDay = () => {
   }
 };
 zoomOutDay();
+
+// Exercício 7
+const myTasks = document.querySelector('.my-tasks');
+const spanCreate = document.createElement('span');
+
+let newTask = (string) => {
+  spanCreate.innerText = string;
+  myTasks.appendChild(spanCreate);
+};
+newTask('Fazer exercícios de Eventos no JS');
+
+// Exercício 8
+const createTasksColor = document.createElement('div');
+
+let taskColor = (string) => {
+  createTasksColor.className = 'task';
+  createTasksColor.style.backgroundColor = string;
+  myTasks.appendChild(createTasksColor);
+};
+taskColor('royalblue');
+
+// Exercício 9
+let taskSelect = (e) => {
+  
+}
