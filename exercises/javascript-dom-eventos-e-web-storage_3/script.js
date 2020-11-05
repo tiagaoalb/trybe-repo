@@ -107,4 +107,53 @@ let holidayClick = () => {
 holidayClick();
 
 // Exercício 4
+let btnFriday = (string) => {
+  const btnContainer = document.querySelector('.buttons-container');
+  const btnCreate = document.createElement('button');
+  btnCreate.id = 'btn-friday';
+  btnCreate.innerText = string;
+  btnContainer.appendChild(btnCreate);
+};
+btnFriday('Sexta-Feira');
 
+// Exercício 5
+let btnFridayText = (array) => {
+  const btnFriday = document.querySelector('#btn-friday');
+  const fridayList = document.getElementsByClassName('friday');
+
+  for (let i = 0; i < fridayList.length; i += 1) {
+    btnFriday.addEventListener('click', () => {
+      if (fridayList[i].innerHTML !== 'Sextou!') {
+        fridayList[i].innerHTML = 'Sextou!';
+      } else {
+        fridayList[i].innerHTML = array[i];
+      }
+    });
+  }
+};
+btnFridayText([4, 11, 18, 25]);
+
+// Exercício 6
+const liDay = document.getElementsByClassName('day');
+
+let zoomIn = (e) => {
+  e.target.style.fontSize = '40px';
+};
+
+let zoomOut = (e) => {
+  e.target.style.fontSize = '20px';
+};
+
+let zoomInDay = () => {
+  for (let i of liDay) {
+    i.addEventListener('mouseover', zoomIn);
+  }
+};
+zoomInDay();
+
+let zoomOutDay = () => {
+  for (let i of liDay) {
+    i.addEventListener('mouseout', zoomOut);
+  }
+};
+zoomOutDay();
