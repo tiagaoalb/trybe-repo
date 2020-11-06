@@ -179,6 +179,14 @@ let taskColor = (string) => {
 taskColor('royalblue');
 
 // Exercício 9
-let taskSelect = (e) => {
-  
-}
+let taskSelect = () => {
+  const taskDiv = document.getElementsByClassName('task')[0];
+  taskDiv.addEventListener('click', () => {
+    if (taskDiv.className !== 'task selected') {
+      taskDiv.classList.add('selected');
+    } else {
+      taskDiv.className = 'task';
+    }
+  });
+};
+taskSelect();
