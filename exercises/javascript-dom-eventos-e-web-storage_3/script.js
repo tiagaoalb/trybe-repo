@@ -21,7 +21,7 @@ function createDaysOfTheWeek() {
 
 createDaysOfTheWeek();
 
-// Exercício 1
+// Exercise 1
 const dezDaysList = [
   29,
   30,
@@ -58,19 +58,17 @@ const dezDaysList = [
   31,
 ];
 
-const daysOfTheMonth = document.querySelector('#days');
+const days = document.querySelector('#days');
 
 let monthDays = () => {
   for (let day of dezDaysList) {
     let listOfDays = document.createElement('li');
     listOfDays.className = 'day';
     listOfDays.innerHTML = day;
-    daysOfTheMonth.appendChild(listOfDays);
-
+    days.appendChild(listOfDays);
     if (day == 24 || day == 25 || day == 31) {
       listOfDays.classList.add('holiday');
     }
-
     if (day === 4 || day === 11 || day === 18 || day === 25) {
       listOfDays.classList.add('friday');
     }
@@ -78,7 +76,7 @@ let monthDays = () => {
 };
 monthDays();
 
-// Exercício 2
+// Exercise 2
 const buttonContainer = document.querySelector('.buttons-container');
 
 let holidayButton = (string) => {
@@ -89,7 +87,7 @@ let holidayButton = (string) => {
 };
 holidayButton('Feriados');
 
-// Exercício 3
+// Exercise 3
 let holidayClick = () => {
   const holidayBtn = document.querySelector('#btn-holiday');
   const holidayLi = document.querySelectorAll('.holiday');
@@ -106,7 +104,7 @@ let holidayClick = () => {
 };
 holidayClick();
 
-// Exercício 4
+// Exercise 4
 let btnFriday = (string) => {
   const btnContainer = document.querySelector('.buttons-container');
   const btnCreate = document.createElement('button');
@@ -116,7 +114,7 @@ let btnFriday = (string) => {
 };
 btnFriday('Sexta-Feira');
 
-// Exercício 5
+// Exercise 5
 let btnFridayText = (array) => {
   const btnFriday = document.querySelector('#btn-friday');
   const fridayList = document.getElementsByClassName('friday');
@@ -133,15 +131,17 @@ let btnFridayText = (array) => {
 };
 btnFridayText([4, 11, 18, 25]);
 
-// Exercício 6
+// Exercise 6
 const liDay = document.getElementsByClassName('day');
 
 let zoomIn = (e) => {
-  e.target.style.fontSize = '40px';
+  e.target.style.fontSize = '30px';
+  e.target.style.fontWeight = 'bold';
 };
 
 let zoomOut = (e) => {
   e.target.style.fontSize = '20px';
+  e.target.style.fontWeight = 'normal';
 };
 
 let zoomInDay = () => {
@@ -158,7 +158,7 @@ let zoomOutDay = () => {
 };
 zoomOutDay();
 
-// Exercício 7
+// Exercise 7
 const myTasks = document.querySelector('.my-tasks');
 const spanCreate = document.createElement('span');
 
@@ -166,9 +166,9 @@ let newTask = (string) => {
   spanCreate.innerText = string;
   myTasks.appendChild(spanCreate);
 };
-newTask('Fazer exercícios de Eventos no JS');
+newTask('Fazer Exercises de Eventos no JS');
 
-// Exercício 8
+// Exercise 8
 const createTasksColor = document.createElement('div');
 
 let taskColor = (string) => {
@@ -178,15 +178,31 @@ let taskColor = (string) => {
 };
 taskColor('royalblue');
 
-// Exercício 9
+// Exercise 9
 let taskSelect = () => {
-  const taskDiv = document.getElementsByClassName('task')[0];
-  taskDiv.addEventListener('click', () => {
-    if (taskDiv.className !== 'task selected') {
-      taskDiv.classList.add('selected');
+  const taskDiv = document.querySelector('.task');
+  taskDiv.addEventListener('click', (e) => {
+    const selectedTask = document.querySelector('.selected');
+    if (selectedTask === null) {
+      e.target.className = 'task selected';
     } else {
-      taskDiv.className = 'task';
+      e.target.className = 'task';
     }
   });
 };
 taskSelect();
+
+// Exercise 10
+let toggleDayColor = () => {
+  days.addEventListener('click', (e) => {
+    const selectedTask = document.querySelector('.selected');
+    if (selectedTask !== null) {
+      if (e.target.style.color === selectedTask.style.backgroundColor) {
+        e.target.style.color = 'rgb(119, 119, 119)';
+      } else {
+        e.target.style.color = selectedTask.style.backgroundColor;
+      }
+    }
+  });
+};
+toggleDayColor();
