@@ -10,7 +10,6 @@ body {
   width: 100vw;
   height: 100vh;
   background: #457b9d;
-  position: relative;
 }
 
 header {
@@ -26,17 +25,18 @@ h1 {
 }
 
 nav {
-  padding: 20px;
+  padding: 10px 45px;
 }
 
-span {
+nav span {
   padding: 0 10px;
-  font-family: Lora;
-  font-size: 24px;
+  font-family: Poppins;
+  font-size: 22px;
   color: #f1faee;
 }
 
 input {
+  margin-right: 40px;
   border-radius: 5px;
   font-size: 24px;
   line-height: 24px;
@@ -71,29 +71,40 @@ section {
 article {
   padding: 20px 60px;
   float: left;
-  width: 700px;
+  width: 50%;
   text-align: justify;
+  line-height: 1.8;
 }
 
 article h2 {
-  margin-bottom: 20px;
+  padding: 20px;
 }
 
 aside {
   padding: 20px 60px;
   float: right;
-  width: 700px;
+  width: 50%;
   text-align: justify;
+  line-height: 1.8;
 }
 
 aside h2 {
-  margin-bottom: 20px;
+  padding: 20px;
 }
 
 footer {
   width: 100vw;
-  height: 40px;
-
-  text-align: center;
+  height: 50px;
+  bottom: 0;
+  position: fixed;
+	display: flex;
+	align-items: center;
   background: #e63946;
+}
+
+footer p {
+  font-family: Poppins;
+  font-size: 24px;
+	color: #f1faee;
+	margin: auto;
 }
