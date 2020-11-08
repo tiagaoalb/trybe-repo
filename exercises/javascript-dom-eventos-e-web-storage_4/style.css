@@ -35,31 +35,31 @@ nav span {
   color: #f1faee;
 }
 
-input {
+select {
   margin-right: 40px;
   border-radius: 5px;
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 20px;
+  
 }
 
 #background-color {
-  width: 140px;
+  width: 120px;
 }
 
 #text-color {
-  width: 140px;
+  width: 120px;
 }
 
 #font-size {
-  width: 60px;
+  width: 120px;
 }
 
 #line-height {
-  width: 60px;
+  width: 120px;
 }
 
 #font-type {
-  width: 140px;
+  width: 120px;
 }
 
 section {

@@ -8,16 +8,41 @@
     <header>
       <h1>Leitor de conteúdo 5.4</h1>
       <nav class="text-format">
-        <span>Cor de fundo: </span>
-        <input type="text" id="background-color">
-        <span>Cor do texto: </span>
-        <input type="text" id="text-color">
-        <span>Tamanho da fonte: </span>
-        <input type="text" id="font-size">
-        <span>Espaçamento entre linhas: </span>
-        <input type="text" id="line-height">
-        <span>Tipo da fonte: </span>
-        <input type="text" id="font-type">
+        <span>Cor de fundo</span>
+        <select name="background-color" id="background-color">
+          <option value="default">Padrão</option>
+          <option value="dark">Escuro</option>
+          <option value="light">Claro</option>
+          <option value="blue">Azul</option>
+        </select>
+        <span>Cor do texto</span>
+        <select name="text-color" id="text-color">
+          <option value="default">Padrão</option>
+          <option value="dark">Escuro</option>
+          <option value="light">Claro</option>
+          <option value="blue">Azul</option>
+        </select>
+        <span>Tamanho da fonte</span>
+        <select name="font-size" id="font-size">
+          <option value="default">Padrão</option>
+          <option value="small">16</option>
+          <option value="big">24</option>
+          <option value="bigger">32</option>
+        </select>
+        <span>Espaço entre linhas</span>
+        <select name="line-height" id="line-height">
+          <option value="default">Padrão</option>
+          <option value="one">1</option>
+          <option value="one-half">1.5</option>
+          <option value="two">2</option>
+        </select>
+        <span>Tipo de fonte</span>
+        <select name="font-type" id="font-type">
+          <option value="default">Padrão</option>
+          <option value="Lora">Lora</option>
+          <option value="Roboto">Roboto</option>
+          <option value="Jetbrains">Jetbrains</option>
+        </select>
       </nav>
     </header>
   </head>
