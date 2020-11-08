@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #457b9d;
+  position: relative;
+}
+
+header {
+  background: #1d3557;
+}
+
+h1 {
+  padding: 20px;
+  font-family: Poppins;
+  font-size: 48px;
+  color: #f1faee;
+  text-align: center;
+}
+
+nav {
+  padding: 20px;
+}
+
+span {
+  padding: 0 10px;
+  font-family: Lora;
+  font-size: 24px;
+  color: #f1faee;
+}
+
+input {
+  border-radius: 5px;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+#background-color {
+  width: 140px;
+}
+
+#text-color {
+  width: 140px;
+}
+
+#font-size {
+  width: 60px;
+}
+
+#line-height {
+  width: 60px;
+}
+
+#font-type {
+  width: 140px;
+}
+
+section {
+  display: inline-block;
+  justify-content: center;
+  font-family: Poppins;
+}
+
+article {
+  padding: 20px 60px;
+  float: left;
+  width: 700px;
+  text-align: justify;
+}
+
+article h2 {
+  margin-bottom: 20px;
+}
+
+aside {
+  padding: 20px 60px;
+  float: right;
+  width: 700px;
+  text-align: justify;
+}
+
+aside h2 {
+  margin-bottom: 20px;
+}
+
+footer {
+  width: 100vw;
+  height: 40px;
+
+  text-align: center;
+  background: #e63946;
+}
