@@ -37,3 +37,22 @@ let changeFontFamily = (family) => {
   }
   localStorage.setItem('fontFamily', family);
 };
+
+let initialize = () => {
+  let backgroundColor = localStorage.getItem('backgroundColor');
+  if (backgroundColor) changeBackgroundColor(backgroundColor);
+
+  let fontColor = localStorage.getItem('fontColor');
+  if (fontColor) changeFontColor(fontColor);
+
+  let fontSize = localStorage.getItem('fontSize');
+  if (fontSize) changeFontSize(fontSize);
+
+  let lineHeight = localStorage.getItem('lineHeight');
+  if (lineHeight) changeLineHeight(lineHeight);
+
+  let fontFamily = localStorage.getItem('fontFamily');
+  if (fontFamily) changeFontFamily(fontFamily);
+};
+
+initialize();
