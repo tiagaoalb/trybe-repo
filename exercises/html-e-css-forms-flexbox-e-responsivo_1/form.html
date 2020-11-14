@@ -1,64 +1,146 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulário 6.1</title>
-</head>
-<body>
-  <h1>Formulário 6.1</h1>
-  <fieldset>
-    <h2>Dados pessoais</h2>
-    <label for="name-input">
-      Nome completo:
-      <input type="text" id="name-input" maxlength="40" required>
-    </label>
-    <label for="email-input">
-      Digite seu email:
-      <input type="email" id="email-input" maxlength="50" required>
-    </label>
-    <label for="cpf-input">
-      Digite seu CPF:
-      <input type="text" id="cpf-input" maxlength="11" required>
-    </label>
-    <label for="address-input">
-      Digite seu endereço:
-      <input type="text" id="address-input" maxlength="200" required>
-    </label>
-    <label for="city-input">
-      Digite seu cidade:
-      <input type="text" id="city-input" maxlength="28" required>
-    </label>
-    <label for="state-option">
-      <select name="" id="state-option" required></select>
-    </label>
-    <label for="house-radio">
-      Casa
-      <input type="radio" id="house-radio" name="home" required>
-    </label>
-    <label for="apartment-radio">
-      Apartamento
-      <input type="radio" id="apartment-radio" name="home" required>
-    </label>
-  </fieldset>
-  <fieldset>
-    <h2>Dados do seu último emprego</h2>
-    <label for="resume-input">
-      Resumo do currículo:
-      <textarea name="resume" id="resume-input" cols="30" rows="10" maxlength="1000" required></textarea>
-    </label>
-    <label for="position-input">
-      Cargo:
-      <input type="text" id="position-input" maxlength="40" required>
-    </label>
-    <label for="position-description-input">
-      Descrição do cargo:
-      <textarea name="" id="position-description-input" cols="30" rows="10" maxlength="500" required></textarea>
-    </label>
-    <label for="date-input">
-      Data de início:
-      <input type="date" id="date-input">
-    </label>
-  </fieldset>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Formulário 6.1</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<form action="" method="GET" class="main-form" novalidate>
+			<fieldset class="personal-data">
+				<legend class="legend">Dados pessoais</legend>
+				<label for="name-input" class="personal-label">
+					Nome completo:
+					<input
+						type="text"
+						id="name-input"
+						class="main-input"
+						maxlength="40"
+						name="name"
+						required
+					/>
+				</label>
+				<label for="email-input" class="personal-label">
+					Digite seu email:
+					<input
+						type="email"
+						id="email-input"
+						class="main-input"
+						maxlength="50"
+						name="email"
+						required
+					/>
+				</label>
+				<label for="cpf-input" class="personal-label">
+					Digite seu CPF:
+					<input
+						type="text"
+						id="cpf-input"
+						class="main-input"
+						minlength="11"
+						maxlength="11"
+						name="cpf"
+						required
+					/>
+				</label>
+				<label for="address-input" class="personal-label">
+					Digite seu endereço:
+					<input
+						type="text"
+						id="address-input"
+						class="main-input"
+						maxlength="200"
+						name="address"
+						required
+					/>
+				</label>
+				<label for="city-input" class="personal-label">
+					Digite seu cidade:
+					<input
+						type="text"
+						id="city-input"
+						class="main-input"
+						maxlength="28"
+						name="city"
+						required
+					/>
+				</label>
+				<label for="state-option" class="personal-label"
+					>Selecione seu estado
+					<select
+						name=""
+						id="state-option"
+						class="select-state"
+						name="state"
+						required
+					></select>
+				</label>
+				<label for="house-radio" class="personal-label">
+					<input type="radio" id="house-radio" name="home" checked />
+					Casa
+				</label>
+				<label for="apartment-radio" class="personal-label">
+					<input type="radio" id="apartment-radio" name="home" />
+					Apartamento
+				</label>
+			</fieldset>
+			<fieldset class="job-data">
+				<legend class="legend">Dados do seu último emprego</legend>
+				<label for="resume-input" class="job-label">
+					Resumo do currículo:
+					<textarea
+						name="resume"
+						id="resume-input"
+						cols="80"
+						rows="7"
+						class="resume-textarea"
+						maxlength="1000"
+						required
+					></textarea>
+				</label>
+				<label for="position-input" class="job-label">
+					Cargo:
+					<input
+						type="text"
+						id="position-input"
+						class="main-input"
+						maxlength="40"
+						name="position"
+						required
+					/>
+				</label>
+				<label for="position-description-input" class="job-label">
+					Descrição do cargo:
+					<input
+						type="text"
+						id="position-description-input"
+						class="main-input"
+						maxlength="500"
+						name="position-description"
+						required
+					/>
+				</label>
+				<label for="date-input" class="job-label">
+					Data de início:
+					<input
+						type="text"
+						id="date-input"
+						class="date-input"
+						required
+						minlength="10"
+						maxlength="10"
+						name="initial-date"
+					/>
+				</label>
+			</fieldset>
+			<button id="submit" type="submit" class="submit-btn">Enviar</button>
+		</form>
+	</body>
+	<script src="script.js"></script>
 </html>
