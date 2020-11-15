@@ -4,7 +4,17 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Formulário 6.1</title>
-		<link rel="stylesheet" href="style.css" />
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link
+			type="text/css"
+			rel="stylesheet"
+			href="materialize/css/materialize.min.css"
+			media="screen,projection"
+		/>
+		<link rel="stylesheet" href="DatePickerX/dist/css/DatePickerX.min.css" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
@@ -12,135 +22,180 @@
 		/>
 	</head>
 	<body>
-		<form action="" method="GET" class="main-form" novalidate>
-			<fieldset class="personal-data">
-				<legend class="legend">Dados pessoais</legend>
-				<label for="name-input" class="personal-label">
-					Nome completo:
-					<input
-						type="text"
-						id="name-input"
-						class="main-input"
-						maxlength="40"
-						name="name"
-						required
-					/>
-				</label>
-				<label for="email-input" class="personal-label">
-					Digite seu email:
-					<input
-						type="email"
-						id="email-input"
-						class="main-input"
-						maxlength="50"
-						name="email"
-						required
-					/>
-				</label>
-				<label for="cpf-input" class="personal-label">
-					Digite seu CPF:
-					<input
-						type="text"
-						id="cpf-input"
-						class="main-input"
-						minlength="11"
-						maxlength="11"
-						name="cpf"
-						required
-					/>
-				</label>
-				<label for="address-input" class="personal-label">
-					Digite seu endereço:
-					<input
-						type="text"
-						id="address-input"
-						class="main-input"
-						maxlength="200"
-						name="address"
-						required
-					/>
-				</label>
-				<label for="city-input" class="personal-label">
-					Digite seu cidade:
-					<input
-						type="text"
-						id="city-input"
-						class="main-input"
-						maxlength="28"
-						name="city"
-						required
-					/>
-				</label>
-				<label for="state-option" class="personal-label"
-					>Selecione seu estado
-					<select
-						name=""
-						id="state-option"
-						class="select-state"
-						name="state"
-						required
-					></select>
-				</label>
-				<label for="house-radio" class="personal-label">
-					<input type="radio" id="house-radio" name="home" checked />
-					Casa
-				</label>
-				<label for="apartment-radio" class="personal-label">
-					<input type="radio" id="apartment-radio" name="home" />
-					Apartamento
-				</label>
-			</fieldset>
-			<fieldset class="job-data">
-				<legend class="legend">Dados do seu último emprego</legend>
-				<label for="resume-input" class="job-label">
-					Resumo do currículo:
-					<textarea
-						name="resume"
-						id="resume-input"
-						cols="80"
-						rows="7"
-						class="resume-textarea"
-						maxlength="1000"
-						required
-					></textarea>
-				</label>
-				<label for="position-input" class="job-label">
-					Cargo:
-					<input
-						type="text"
-						id="position-input"
-						class="main-input"
-						maxlength="40"
-						name="position"
-						required
-					/>
-				</label>
-				<label for="position-description-input" class="job-label">
-					Descrição do cargo:
-					<input
-						type="text"
-						id="position-description-input"
-						class="main-input"
-						maxlength="500"
-						name="position-description"
-						required
-					/>
-				</label>
-				<label for="date-input" class="job-label">
-					Data de início:
-					<input
-						type="text"
-						id="date-input"
-						class="date-input"
-						required
-						minlength="10"
-						maxlength="10"
-						name="initial-date"
-					/>
-				</label>
-			</fieldset>
-			<button id="submit" type="submit" class="submit-btn">Enviar</button>
-		</form>
+		<div class="row">
+			<form action="#" method="GET" class="js-form col s12">
+				<fieldset class="personal-data">
+					<legend>Dados pessoais</legend>
+					<div class="row">
+						<div class="input-field col s6">
+							<input
+								type="text"
+								id="name-input"
+								maxlength="40"
+								name="name"
+								data-validate-field="name"
+							/>
+							<label for="name-input">Nome completo</label>
+						</div>
+						<div class="input-field col s6">
+							<input
+								type="email"
+								id="email-input"
+								maxlength="50"
+								name="email"
+								data-validate-field="email"
+							/>
+							<label for="email-input">Digite seu email</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s1">
+							<input
+								type="text"
+								id="cpf-input"
+								minlength="11"
+								maxlength="11"
+								name="cpf"
+								data-validate-field="cpf"
+							/>
+							<label for="cpf-input">Digite seu CPF</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s3">
+							<input
+								type="text"
+								id="address-input"
+								maxlength="200"
+								name="address"
+								data-validate-field="address"
+							/>
+							<label for="address-input">Digite seu endereço</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s2">
+							<input
+								type="text"
+								id="city-input"
+								maxlength="28"
+								name="city"
+								data-validate-field="city"
+							/>
+							<label for="city-input">Digite seu cidade</label>
+						</div>
+					</div>
+					<div class="input-field col s2">
+						<select
+							id="state-option"
+							name="state"
+							class="browser-default"
+							data-validate-field="state"
+							required
+						>
+							<option value="" disabled selected>Selecione seu estado</option>
+						</select>
+					</div>
+					<div class="row">
+						<div class="input field col s1">
+							<label for="house-radio">
+								<input
+									type="radio"
+									id="house-radio"
+									name="home"
+									class="with-gap"
+									checked
+								/>
+								<span>Casa</span>
+							</label>
+						</div>
+						<div class="input field col s1">
+							<label for="apartment-radio">
+								<input
+									type="radio"
+									id="apartment-radio"
+									name="home"
+									class="with-gap"
+								/>
+								<span>Apartamento</span>
+							</label>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>Dados do seu último emprego</legend>
+					<div class="row">
+						<div class="input-field col s12">
+							<label for="resume-input">Resumo do currículo</label>
+							<textarea
+								name="resume"
+								id="resume-input"
+								cols="80"
+								rows="7"
+								class="materialize-textarea"
+								maxlength="1000"
+								data-validate-field="resume"
+							>
+							</textarea>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s2">
+							<input
+								type="text"
+								id="position-input"
+								maxlength="40"
+								name="position"
+								data-validate-field="position"
+							/>
+							<label for="position-input">Cargo</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input
+								type="text"
+								id="position-description-input"
+								maxlength="500"
+								name="position_description"
+								data-validate-field="position_description"
+							/>
+							<label for="position-description-input">Descrição do cargo</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input field col s1">
+							<input
+								type="text"
+								id="date-input"
+								name="initial_date"
+								placeholder="dd/mm/aaaa"
+								data-validate-field="initial_date"
+								required
+							/>
+							<label for="date-input">Data de início</label>
+						</div>
+					</div>
+				</fieldset>
+				<div class="row">
+					<button
+						id="submit"
+						type="submit"
+						class="btn waves-effect waves-light"
+						name="action"
+					>
+						Enviar
+						<i class="material-icons right">send</i>
+					</button>
+				</div>
+			</form>
+		</div>
 	</body>
+	<script src="DatePickerX/dist/js/DatePickerX.min.js"></script>
+	<script src="node_modules/just-validate/dist/js/just-validate.min.js"></script>
+	<script
+		type="text/javascript"
+		src="materialize/js/materialize.min.js"
+	></script>
 	<script src="script.js"></script>
 </html>
