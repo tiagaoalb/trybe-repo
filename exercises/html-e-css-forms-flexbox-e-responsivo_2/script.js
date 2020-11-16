@@ -1,4 +1,5 @@
 const selectStates = document.querySelector('#state-option');
+
 document.getElementById('date-input').DatePickerX.init({
 	format: 'dd/mm/yyyy',
 });
