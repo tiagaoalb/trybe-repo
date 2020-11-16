@@ -28,7 +28,7 @@ new window.JustValidate('.js-form', {
 		},
 		state: {
 			required: true,
-		}
+		},
 	},
 });
 
