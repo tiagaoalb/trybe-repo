@@ -1,7 +1,4 @@
 #pond {
 	display: flex;
-}
-
-.yellow {
-	order: 3;
+	flex-wrap: wrap;
 }
