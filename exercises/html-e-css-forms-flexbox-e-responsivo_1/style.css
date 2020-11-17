@@ -1,0 +1,82 @@
+body {
+	width: 100vw;
+	height: 100vh;
+	box-sizing: border-box;
+	background: lightgrey;
+}
+
+.main-form {
+	overflow: hidden;
+}
+
+.personal-data {
+	background: rgb(155, 155, 155);
+	border-radius: 20px;
+	color: rgb(13, 27, 42);
+	display: flex;
+	flex-direction: column;
+	font-family: Montserrat, sans-serif;
+	font-weight: 500;
+	margin: 40px auto;
+	padding: 10px;
+	width: 600px;
+}
+
+.personal-label {
+	color: rgb(13, 27, 42);
+	font-weight: bold;
+	padding: 5px;
+}
+
+.job-data {
+	background: rgb(155, 155, 155);
+	border-radius: 20px;
+	color: rgb(13, 27, 42);
+	display: flex;
+	flex-direction: column;
+	font-family: Montserrat, sans-serif;
+	margin: 20px auto;
+	width: 600px;
+}
+
+.legend {
+	color: rgb(13, 27, 42);
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.job-label {
+	color: rgb(13, 27, 42);
+	font-weight: bold;
+	padding: 5px;
+}
+
+.select-state {
+	border-radius: 5px;
+	font-size: 16px;
+	padding: 5px;
+}
+
+.resume-textarea {
+	border-radius: 10px;
+}
+
+.main-input {
+	border-radius: 5px;
+	clear: both;
+	float: right;
+	padding: 5px;
+	width: 400px;
+}
+
+.date-input {
+	border-radius: 5px;
+	font-size: 16px;
+	padding: 5px;
+	width: 80px;
+}
+
+.submit-btn {
+	font-size: 24px;
+	width: 100px;
+}
