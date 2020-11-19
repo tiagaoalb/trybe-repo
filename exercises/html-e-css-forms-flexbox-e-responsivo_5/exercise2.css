@@ -14,9 +14,40 @@ body {
 }
 
 h1 {
-	font-size: 32px;
+	font-size: 24px;
+}
+
+h2 {
+	font-size: 18px;
+}
+
+h3 {
+	font: 18px;
 }
 
 p {
+	font-size: 16px;
 	text-align: justify;
+}
+
+@media (min-width: 600px) {
+	body {
+		background-color: ivory;
+	}
+
+	h1 {
+		font-size: 32px;
+	}
+	
+	h2 {
+		font-size: 24px;
+	}
+	
+	h3 {
+		font: 24px;
+	}
+	
+	p {
+		font-size: 18px;
+	}
 }
