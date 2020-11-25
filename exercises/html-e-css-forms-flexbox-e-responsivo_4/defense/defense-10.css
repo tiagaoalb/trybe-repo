@@ -1,0 +1,21 @@
+.tower-group-1 {
+	display: flex;
+	justify-content: space-around;
+}
+.tower-1-2 {
+	order: 3;
+}
+
+.tower-group-2 {
+	display: flex;
+	justify-content: space-around;
+}
+.tower-2-1 {
+	order: 3;
+}
+.tower-2-2 {
+	order: 1;
+}
+.tower-2-3 {
+	order: 2;
+}
