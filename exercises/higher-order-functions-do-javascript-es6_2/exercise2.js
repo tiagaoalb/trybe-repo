@@ -7,7 +7,7 @@ const books = [
     genre: 'Fantasia',
     author: {
       name: 'George R. R. Martin',
-      birthYear: 1948
+      birthYear: 1948,
     },
     releaseYear: 1991,
   },
@@ -47,7 +47,7 @@ const books = [
     genre: 'Terror',
     author: {
       name: 'Stephen King',
-      birthYear: 1947
+      birthYear: 1947,
     },
     releaseYear: 1986,
   },
@@ -66,32 +66,36 @@ const books = [
 const expected_result = [
   {
     age: 31,
-    author: 'Isaac Asimov'
+    author: 'Isaac Asimov',
   },
   {
     age: 38,
-    author: 'H. P. Lovecraft'
+    author: 'H. P. Lovecraft',
   },
   {
     age: 39,
-    author: 'Stephen King'
+    author: 'Stephen King',
   },
   {
     age: 43,
-    author: 'George R. R. Martin'
+    author: 'George R. R. Martin',
   },
   {
     age: 45,
-    author: 'Frank Herbert'
+    author: 'Frank Herbert',
   },
   {
     age: 62,
-    author: 'J. R. R. Tolkien'
-  }
+    author: 'J. R. R. Tolkien',
+  },
 ];
 
 function nameAndAge() {
-  // escreva seu código aqui
+  return books
+    .map((book) => ({
+      age: book.releaseYear - book.author.birthYear,
+      author: book.author.name,
+    }))
+    .sort((author1, author2) => author1.age - author2.age);
 }
-
 assert.deepStrictEqual(nameAndAge(), expected_result);
