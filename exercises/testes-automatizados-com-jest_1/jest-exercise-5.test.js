@@ -12,3 +12,7 @@ const obj3 = {
   title: 'My Different Title',
   description: 'My Description',
 };
+
+test('test to compare if two objects are identical', () => {
+  expect(obj1 === obj3).not.toBe(true);
+});
