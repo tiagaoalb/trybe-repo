@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+echo "Enter your message"
+read message
+git add .
+$wait
+git commit -m"${message}"
+$wait
+git push
