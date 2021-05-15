@@ -9,6 +9,7 @@
     "velocidade": "node velocidade.js",
     "sorteio": "node sorteio.js",
     "fatorial": "node fatorial.js",
+    "fibonacci": "node fibonacci.js",
     "start": "node index.js"
   },
   "author": "Tiago Bovolin",

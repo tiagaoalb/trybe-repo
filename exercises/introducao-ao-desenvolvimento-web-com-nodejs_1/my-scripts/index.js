@@ -5,14 +5,15 @@ const scripts = [
   { name: 'Calcular velocidade média ', script: './velocidade.js' },
   { name: 'Jogo de adivinhação ', script: './sorteio.js' },
   { name: 'Calcular fatorial ', script: './fatorial.js' },
+  { name: 'Calcular sequência fibonacci ', script: './fibonacci.js' },
 ];
 
 const msg = scripts
-  .map((script, index) => `${index + 1} - ${script.name}`)
+  .map((script, index) => `${index + 1} - ${script.name}`);
 
 msg.unshift('Escolha um número para executar o script correspondente');
 msg.push('Digite a opção: ');
-const result = msg.join('\n')
+const result = msg.join('\n');
 const scriptNumber = readline.questionInt(result) - 1;
 
 const script = scripts[scriptNumber];
