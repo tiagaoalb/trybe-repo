@@ -1,0 +1,20 @@
+{
+  "name": "my-scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "imc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "imc": "node imc.js",
+    "velocidade": "node velocidade.js",
+    "sorteio": "node sorteio.js",
+    "fatorial": "node fatorial.js",
+    "fibonacci": "node fibonacci.js",
+    "start": "node index.js"
+  },
+  "author": "Tiago Bovolin",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
