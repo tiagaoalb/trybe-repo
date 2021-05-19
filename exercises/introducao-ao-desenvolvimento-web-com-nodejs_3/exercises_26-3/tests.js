@@ -1,11 +1,14 @@
+const fs = require('fs');
+const { stub } = require('sinon');
 const { expect } = require('chai');
 
 const checkNumber = require('./index');
+const writeContent = require('./writeContent');
 
 describe('Run checkNumber function', () => {
   describe('When the number is > 0', () => {
     describe('the answer', () => {
-      it('is a string', () => {
+      it('it is a string', () => {
         const answer = checkNumber(1);
         expect(answer).to.be.a('string');
       });
@@ -19,7 +22,7 @@ describe('Run checkNumber function', () => {
 
   describe('When the number is < 0', () => {
     describe('the answer', () => {
-      it('is a string', () => {
+      it('it is a string', () => {
         const answer = checkNumber(-1);
         expect(answer).to.be.a('string');
       });
@@ -33,7 +36,7 @@ describe('Run checkNumber function', () => {
 
   describe('When the number is equal to 0', () => {
     describe('the answer', () => {
-      it('is a string', () => {
+      it('it is a string', () => {
         const answer = checkNumber(0);
         expect(answer).to.be.a('string');
       });
@@ -47,7 +50,7 @@ describe('Run checkNumber function', () => {
 
   describe('When the value is not a number', () => {
     describe('the answer', () => {
-      it('is a string', () => {
+      it('it is a string', () => {
         const answer = checkNumber('AAA');
         expect(answer).to.be.a('string');
       });
@@ -58,4 +61,26 @@ describe('Run checkNumber function', () => {
       });
     });
   });
+});
+
+describe('Check writeFile function', () => {
+  before(() => {
+    stub(fs, 'writeFileSync');
+  });
+
+  after(() => {
+    fs.writeFileSync.restore();
+  });
+
+  describe('the answer', () => {
+    it('it is a string', () => {
+      const answer = writeContent('arquivo.txt', '#vqv');
+      expect(answer).to.be.a('string');
+    });
+
+    it('it is equal to "ok"', () => {
+      const answer = writeContent('arquivo.txt', '#vqv');
+      expect(answer).to.be.equals('ok');
+    })
+  })
 });
